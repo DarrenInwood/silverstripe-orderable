@@ -23,11 +23,11 @@ class Orderable extends DataExtension {
 		}
 	}
 
-	public function updateCMSFields($fields) {
+	public function updateCMSFields(FieldList $fields) {
 		$fields->removeByName('Sort');
 	}
 
-	public function updateFrontEndFields($fields) {
+	public function updateFrontEndFields(FieldList $fields) {
 		$fields->removeByName('Sort');
 	}
 
