@@ -1,0 +1,27 @@
+{
+	"name": "ajshort/silverstripe-orderable",
+	"description": "SilverStripe orderable module",
+	"type": "silverstripe-module",
+	"keywords": ["silverstripe", "orderable"],
+	"license": "BSD-3-Clause",
+	"authors": [
+		{
+			"name": "Andrew Short",
+			"email": "andrewjshort@gmail.com"
+		},
+		{
+			"name": "Marcus Nyeholt",
+			"email": "marcus@silverstripe.com.au"
+		}
+	],
+	"require": {
+		"silverstripe/cms": ">=3.1",
+		"silverstripe/framework": ">=3.1"
+	},
+	"extra": {
+		"installer-name": "orderable",
+		"branch-alias": {
+			"dev-master": "1.0.x-dev"
+		}
+	}
+}

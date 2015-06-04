@@ -4,11 +4,11 @@
  *
  * @package silverstripe-orderable
  */
-class Orderable extends DataObjectDecorator {
+class Orderable extends DataExtension {
 
-	public function extraStatics() {
-		return array('db' => array('Sort' => 'Int'));
-	}
+	private static $db = array(
+		'Sort' => 'Int'
+	);
 
 	public function augmentSQL($query) {
 		if (!$query->orderby && !$query->delete) $query->orderby('"Sort"');
