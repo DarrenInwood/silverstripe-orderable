@@ -10,7 +10,7 @@ class Orderable extends DataExtension {
 		'Sort' => 'Int'
 	);
 
-	public function augmentSQL($query) {
+	public function augmentSQL(SQLQuery &$query) {
 		if (!$query->orderby && !$query->delete) $query->orderby('"Sort"');
 	}
 
