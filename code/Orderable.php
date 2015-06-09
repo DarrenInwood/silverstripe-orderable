@@ -11,7 +11,9 @@ class Orderable extends DataExtension {
 	);
 
 	public function augmentSQL(SQLQuery &$query) {
-		if (!$query->orderby && !$query->delete) $query->orderby('"Sort"');
+		if (count($query->getOrderBy()) == 0 && !$query->getDelete()) {
+			$query->setOrderBy("Sort");
+		}
 	}
 
 	public function onBeforeWrite() {
